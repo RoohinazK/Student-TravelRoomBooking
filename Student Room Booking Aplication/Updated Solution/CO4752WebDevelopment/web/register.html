@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>register page</title>
+    </head>
+    <body bgColor="#344963">
+    <center>
+        <h1 style="color:yellow">Online Student-Accommodation Management System</h1>
+    </center>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <center>
+        <div>
+
+            <form action="UserController" method="post">
+                <table>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px">Email Id:</td>
+                        <td><input type="text" name="emailId" value="" style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" required /></td>
+                    </tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px ">Password:</td>
+                        <td><input type="password" name="password" value="" style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow;  padding-left: 10px" required /></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px">Select Type:</td>
+                        <td style="width: 100px;height: 40px;font-size: 18px;font-weight: bold;background: #394963; border-color: white; border-radius: 12px; color: yellow">
+                            <select name="type" style="width: 150px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px; color: yellow; padding-left: 10px; font-size: 16px">
+                                <option value="Admin">Admin</option>
+                                <option value="Student">Student</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px"><input type="submit" value="Register" name="action" style="width: 100px;height: 40px;font-size: 18px;font-weight: bold;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow"/></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

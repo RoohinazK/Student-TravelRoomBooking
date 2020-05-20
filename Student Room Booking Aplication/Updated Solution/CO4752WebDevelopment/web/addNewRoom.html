@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add New Room</title>
+</head>
+<body bgColor="#344963">
+    <center>
+        <h1 style="color:yellow">Online Student-Accommodation Management System</h1>
+	<h1 style='color: white;font-size: 24px;'>Add New Room</h1>
+	<br/>
+	<br/><br/><br/><br/><br/>
+	<form action="AddRoom" method="post">
+		<table>
+			<tr>
+				<td style="color: white;font-size: 18px; width: 150px; height: 50px">Room ID</td>
+                                <td><input style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" type="text" name="roomId" required/></td>
+			</tr>
+			<tr>
+				<td style="color: white;font-size: 18px; width: 150px; height: 50px">Room Type</td>
+                                <td><input style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" type="text" name="roomType" required/></td>
+			</tr>
+			<tr>
+				<td style="color: white;font-size: 18px; width: 150px; height: 50px">Room Location</td>
+				<td><input style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" type="text" name="roomLocation" required/></td>
+			</tr>
+			<tr>
+				<td style="color: white;font-size: 18px; width: 150px; height: 50px">Your Email Id</td>
+				<td><input style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" type="email" name="emailId" required/></td>
+			</tr>
+                        <tr><td style="color: white;font-size: 18px; width: 150px; height: 40px"></td></tr>
+			<tr>
+				<td colspan="2" style="color: white;font-size: 18px; width: 90px; height: 40px"><input style="width: 150px;height: 50px;font-size: 18px;font-weight: bold;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow" type="submit" value="Save Room" name="action"/></td>
+			</tr>
+		</table>
+	</form>
+</center>
+	<br />
+	<a style="color:white;font-size: 18px;text-decoration: none" href="AdminDashboard">View Rooms</a>
+
+</body>
+</html>

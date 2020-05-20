@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+        <script>
+            var request;
+            function loginInfo() {
+                var emailId = document.login.emailId.value;
+                var password = document.login.password.value;
+                var type = document.login.type.value;
+                var url = "UserController?emailId=" + emailId +"&password=" + password + "&type="+type +"&action=login";
+
+                if (window.XMLHttpRequest) {
+                    request = new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+
+                try {
+                    request.onreadystatechange = getInfo;
+                    request.open("GET", url, true);
+                    request.send();
+                }
+                catch (e) {
+                    alert("Unable to connect to server");
+                }
+
+            }
+
+            function getInfo() {
+                if (request.readyState == 4) {
+                    var val = request.responseText;
+                    document.getElementById('display').innerHTML = val;
+                }
+            }
+        </script>
+    </head>
+    <body bgColor="#344963">
+    <center>
+        <h1 style="color:yellow">Online Student-Accommodation Management System</h1>
+    </center>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <center>
+        <div>
+
+            <form action="UserController" name="login">
+                <table>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px">Email Id:</td>
+                        <td><input type="text" name="emailId" value="" style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow; padding-left: 10px" required/></td>
+                    </tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px ">Password:</td>
+                        <td><input type="password" name="password" value="" style="width: 200px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow;  padding-left: 10px" required/></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px">Select Type:</td>
+                        <td style="width: 100px;height: 40px;font-size: 18px;font-weight: bold;background: #394963; border-color: white; border-radius: 12px; color: yellow">
+                           <select name="type" style="width: 150px;height: 30px;font-size: 16px;font-weight: 500;background: #394963; border: white 2px solid; border-radius: 15px; color: yellow; padding-left: 10px; font-size: 16px">
+                                <option value="Admin">Admin</option>
+                                <option value="Student">Student</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color: white;font-size: 18px; width: 90px; height: 50px"><input type="button" value="Login" onclick="loginInfo()" style="width: 100px;height: 40px;font-size: 18px;font-weight: bold;background: #394963; border: white 2px solid; border-radius: 15px;color: yellow"/></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </center>
+    <br/><br/><br/><br/>
+    <span id="display"> </span>
+
+</body>
+</html>
